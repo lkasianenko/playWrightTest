@@ -5,13 +5,15 @@
   "main": "index.js",
   "scripts": {
     "test:qa": "cross-env test_env=qa npx playwright test --grep '@uismoke' --project=chromium",
-    "test:dev": "cross-env test_env=dev npx playwright test --grep '@uismoke' --project=chromium"
+    "test:dev": "cross-env test_env=dev npx playwright test --grep '@uismoke' --project=chromium",
+    "allure:report": "./node_modules/.bin/allure generate my-allure-results -o allure-report --clean"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@playwright/test": "^1.32.1",
+    "allure-commandline": "^2.21.0",
     "allure-playwright": "^2.1.0",
     "cross-env": "^7.0.3",
     "prettier": "^2.8.7"
