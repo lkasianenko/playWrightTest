@@ -25,7 +25,7 @@ jobs:
       - name: Run Playwright tests
         run: npm run test:dev
       - name: Generate allure report
-        run: allure generate my-allure-results -o allure-report --clean
+        run: npm run allure:report
       - uses: actions/upload-artifact@v3
         if: always()
         with:
